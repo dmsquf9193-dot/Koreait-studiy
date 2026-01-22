@@ -174,9 +174,6 @@ ALTER TABLE staff ADD COLUMN te_hire_date datetime;
 ALTER TABLE staff ADD CONSTRAINT te_salary UNIQUE (te_salary);
 
 DROP TABLE  ddl_alter;
-DROP TABLE free_board;
-DROP TABLE staff;
-DROP TABLE test_member;
 
 
 

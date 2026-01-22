@@ -67,13 +67,8 @@ id varchar(50)
 CREATE TABLE board_foreign(
 board_foreign_id int PRIMARY KEY AUTO_INCREMENT,
 title varchar(300),
-writer_id int, 
-CONSTRAINT fk_wriker FOREIGN KEY (writer_id)
-REFERENCES member_primary(member_primary_id)
-ON DELETE CASCADE  
+writer_id int REFERENCES member_primary(member_primary_id)
 );
-
-DROP TABLE board_foreign;
 
 INSERT INTO member_primary(id)
 VALUES('test1'),
@@ -82,16 +77,8 @@ VALUES('test1'),
 
 SELECT * FROM member_primary;
 
-INSERT INTO board_foreign(title, writer_id) VALUES('게시글 제목!!', 1);
+INSERT INTO board_foreign(title, writer_id) VALUES('게시글 제목!!', 2);
 SELECT * FROM board_foreign;
-
-DELETE FROM member_primary 
-WHERE member_primary_id = 1;
-
-SELECT * FROM member_primary;
-
-
-
 
 
 
