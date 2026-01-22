@@ -1,0 +1,52 @@
+
+!ENTRY org.eclipse.ui.ide 4 4 2026-01-22 10:15:39.234
+!MESSAGE 작업공간 저장 문제점
+
+!ENTRY org.eclipse.ui.ide 4 1 2026-01-22 10:15:39.237
+!MESSAGE Workbench의 상태를 저장하려는 중에 문제점이 발생했습니다.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2026-01-22 10:15:39.237
+!MESSAGE Could not write workspace metadata 'C:/study/2.Database/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree'.
+!STACK 0
+java.io.FileNotFoundException: C:\study\2.Database\.metadata\.plugins\org.eclipse.core.resources\.root\1.tree (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:230)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:179)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:55)
+	at org.eclipse.core.internal.resources.SaveManager.saveTree(SaveManager.java:1491)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1288)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2549)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:558)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:123)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2026-01-22 10:15:40.299
+!MESSAGE Can't stop instance server
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2026-01-22 10:15:40.299
+!MESSAGE C:\study\2.Database\.metadata\dbeaver-instance.properties
+!STACK 0
+java.nio.file.NoSuchFileException: C:\study\2.Database\.metadata\dbeaver-instance.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:105)
+	at java.base/java.nio.file.Files.delete(Files.java:1153)
+	at org.jkiss.dbeaver.model.cli.ApplicationInstanceServer.stopInstanceServer(ApplicationInstanceServer.java:106)
+	at org.jkiss.dbeaver.ui.app.standalone.DBeaverApplication.lambda$3(DBeaverApplication.java:660)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$MonitoringTask.run(RuntimeUtils.java:767)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$1.run(RuntimeUtils.java:268)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:110)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-01-22 10:15:40.371
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2026-01-22 10:17:14.764 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko
+Framework arguments:  -eclipse.keyring C:\Users\adminn\AppData\Roaming\DBeaverData\secure\secure_storage -nosplash
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\study\2.Database -eclipse.keyring C:\Users\adminn\AppData\Roaming\DBeaverData\secure\secure_storage -nosplash
+
+!ENTRY org.eclipse.ui 2 2 2026-01-22 10:17:18.365
+!MESSAGE Invalid preference category path: org.eclipse.debug.ui.ConsolePreferencePage (bundle: org.eclipse.ui.console, page: org.eclipse.ui.internal.console.ansi.preferences.AnsiConsolePreferencePage)
