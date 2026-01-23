@@ -1,0 +1,29 @@
+-- 오름차순
+SELECT *FROM employees
+ORDER BY  birth_date;
+
+-- 내림차순
+SELECT *FROM employees
+ORDER BY  birth_date DESC;
+
+-- 올림차순
+SELECT *FROM employees
+ORDER BY  birth_date ASC;
+
+SELECT * FROM titles
+ORDER BY to_date DESC;
+
+-- 가장 높은 값을 찾을 때
+SELECT max(salary) FROM salaries;
+-- 가장 낮은 값을 찾을 때
+SELECT min(salary) FROM salaries;
+-- 평균값
+SELECT avg(salary) FROM salaries;
+-- 합계
+SELECT sum(salary) FROM salaries;
+
+
+
+
+
+

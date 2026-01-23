@@ -63,22 +63,6 @@ SELECT salary * 12 AS '예상 연봉',
  SELECT * FROM employees
  WHERE first_name LIKE 'G__';
  
- -- IS NULL 
- SELECT * FROM titles
- WHERE to_date IS NULL;
- 
-  SELECT * FROM titles
- WHERE to_date IS NOT NULL;
-  
- -- IN 여러개의 값을 찾고싶을 때 사용
-  SELECT * FROM departments
-  WHERE dept_no IN('d005', 'd006');
- -- IN 키워드 안쓸 때
-  WHERE dept_no = 'd005'
-  OR dept_no = 'd006'
-  
-  
- 
  
  
  
