@@ -25,7 +25,7 @@ public class Ex03_if {
 			System.out.println("number2는 20보다 큽니다!");
 		}
 		
-		// 3. else문
+		// 3. else문 -> else는 무조건 실행
 		// - 위의 조건(if~else if)이 모두 거짓일 때 코드를 실행하는 문법
 		// - 그 외
 		int number3 = 17;

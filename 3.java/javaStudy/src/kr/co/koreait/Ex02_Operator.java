@@ -54,12 +54,12 @@ public class Ex02_Operator {
 	   
 		
 		System.out.println("-------------논리 부정 연산자--------------");
-		// 4. 논리 부정 연산자
+		// 4. 논리 부정 연산자 !
 		// - true면 false를 반환하고 false면 true를 반환
 		// - 논리(true/false)를 부정하는 연산자
 		String str3 = "가나다라";
-		System.out.println("".equals(str3));  // str3이 비워져 있으면 true
-		System.out.println(!"".equals(str3)); // str3이 비워져있지 않으면 true
+		System.out.println("".equals(str3));  // str3이 비워져 있으면 true ->같은거니?
+		System.out.println(!"".equals(str3)); // str3이 비워져있지 않으면 true -> 같지 않은거니?
 		
 		
 		System.out.println("-------------논리 연산자--------------");
@@ -67,11 +67,10 @@ public class Ex02_Operator {
 		// - 논리식으로 판단하여 참(true) 또는 거짓(false) 반환
 		
 		// && : 두 피연산자가 모두 참(true)일 때 true 반환
-		// || : 두 피연산자 중 하나라도 참(true)일 때 true 반환
 		System.out.println(10 < 5 && 20 == 20); // false && true 앞에서 거짓 나오면 뒤에는 보지도 않고 바로  false
 		System.out.println(33 > 28 && 5 != 7); // true && true
 		
-		
+		// || : 두 피연산자 중 하나라도 참(true)일 때 true 반환
 		System.out.println(10 < 5 || 20 == 20); // false || true
 		System.out.println(33 > 28 || 5 != 7); // true || 앞에서 참이 나오면 뒤는 보지도 않음 바로 true
 		

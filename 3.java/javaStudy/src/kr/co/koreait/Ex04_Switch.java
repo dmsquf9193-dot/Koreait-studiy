@@ -7,7 +7,6 @@ public class Ex04_Switch {
 	public static void main(String[] args) {
 		// Switch문
 		// - 특정 변수의 값이 일치하면 (==) 코드를 실행하는 조건문
-		
 		int num = 2;
 		
 		switch(num) {
@@ -21,6 +20,7 @@ public class Ex04_Switch {
 			System.out.println("num은 1도 2도 아닙니다.");
 		}
 		
+		// - 문자열 비교
 		String name = "김재섭";
 		
 		switch(name) {
