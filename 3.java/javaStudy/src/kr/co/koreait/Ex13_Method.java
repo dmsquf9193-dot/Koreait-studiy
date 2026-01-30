@@ -1,5 +1,7 @@
 package kr.co.koreait;
 
+import java.util.Scanner;
+
 public class Ex13_Method {
 
 	public static void main(String[] args) {
@@ -14,12 +16,26 @@ public class Ex13_Method {
 		
 		System.out.println(result);
 		
+
+        Ex13_3_BankAccount bank = new Ex13_3_BankAccount();
+        bank.deposit(100000);
+        bank.withdraw(5000);
+        String check = bank.checkBalance();
+        System.out.println(check);
+        
+        //System.out.println(check.checkBalance());
+
+		
+		int[] numbers = {100, 200, 300, 400};
+		
 		Ex13_1_Calc calc = new Ex13_1_Calc();
 		int add = calc.add(1,2);
+		int sum = calc.sub(numbers);
+		System.out.println(sum);
 		System.out.println(add);
 		
-		int sub= calc.sub(5,3,1);
-		System.out.println(sub);
+		//int sub= calc.sub(5,3,1);
+		//System.out.println(sub);
 		
 		int mul= calc.mul(1,2,3,4);
 		System.out.println(mul);
@@ -42,7 +58,11 @@ public class Ex13_Method {
 	// - void : 반환 타입 없음(return 없음)
 	public String printHello(String str) {
 		System.out.println(str);
-		return "잘 출력되었습니다.";
+		return "잘 출력되었습니다.";	
 	}
 	
 }
+
+
+
+ 
