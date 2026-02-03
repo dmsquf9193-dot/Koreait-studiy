@@ -3,7 +3,7 @@ package kr.co.training;
 public class Ex20_3_MemberInfo {
 	// -private 변수 name, age, addr, isStudent
 	// - isStudent는 Boolean
-	// getter/setter
+	// getter(get)/setter(set)
 	
 	private String name;
 	private int age;

@@ -1,7 +1,5 @@
 package kr.co.koreait;
 
-import kr.co.training.Ex21_3_Dog;
-
 public class Ex21_Main {
 
 	public static void main(String[] args) {
@@ -22,7 +20,7 @@ public class Ex21_Main {
 		child.info();
 		child.childInfo();
 		
-	    //dog = new Ex21_3_Dog("김체리", 18);
+	    //Ex21_3_Dog dog = new Ex21_3_Dog("김체리", 18);
 		//dog.name();
 		//dog.age();
 		

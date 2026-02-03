@@ -1,6 +1,6 @@
 package kr.co.training;
 
-public class Ex20_Mailn {
+public class Ex20_Main {
 
 	public static void main(String[] args) {
 		// getter/setter를 사용하는 경우
