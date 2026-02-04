@@ -35,6 +35,7 @@ public class Ex23_Ploy {
 		cr.computer5 = new Ex23_3_LZ();
 		cr.computer6 = new Ex23_3_LZ();
 		
+		
 		cr.allPowerOn();
 	}
 

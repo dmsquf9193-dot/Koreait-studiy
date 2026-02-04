@@ -1,0 +1,11 @@
+package kr.co.training;
+
+public interface Ex24_2_LoginInterface {
+	//2. 24_2_LoginInterface 인터페이스를 생성하세요.
+    //  - 반환 타입 : String,  메서드명 : login
+	public String login(String Id, String Pwd);
+
+	
+
+
+}
