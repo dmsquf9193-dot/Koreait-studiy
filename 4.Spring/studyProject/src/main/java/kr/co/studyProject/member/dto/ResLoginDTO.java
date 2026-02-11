@@ -1,5 +1,14 @@
 package kr.co.studyProject.member.dto;
 
+import java.time.LocalDateTime;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -12,4 +21,7 @@ public class ResLoginDTO {
 
 	private LocalDateTime createAt;
 	private LocalDateTime updatedAt;
-}
+	
+		
+	}
+

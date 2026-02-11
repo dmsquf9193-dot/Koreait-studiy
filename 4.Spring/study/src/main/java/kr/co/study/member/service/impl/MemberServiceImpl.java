@@ -50,7 +50,7 @@ public class MemberServiceImpl implements MemberService {
 		member.setPassword(encodedPassword);
 		
 		// 6. DB 저장
-		memberRepository.save(member);
+
 		
 		
 		
