@@ -51,7 +51,7 @@ public class MemberServiceImpl implements MemberService {
 		
 		// 6. DB 저장
 
-		
+		memberRepository.save(member);
 		
 		
 	}

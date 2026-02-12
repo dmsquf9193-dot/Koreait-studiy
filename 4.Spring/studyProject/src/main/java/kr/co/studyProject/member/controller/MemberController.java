@@ -1,6 +1,5 @@
 package kr.co.studyProject.member.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,12 +9,14 @@ import jakarta.servlet.http.HttpSession;
 import kr.co.studyProject.member.dto.ReqLoginDTO;
 import kr.co.studyProject.member.dto.ReqRegisterDTO;
 import kr.co.studyProject.member.dto.ResLoginDTO;
+import kr.co.studyProject.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 
-@Controller 
+@Controller
 @RequestMapping("/member")
 @RequiredArgsConstructor
 public class MemberController {
+	private final MemberService  memberService;
 	
 	@GetMapping("/register/form")
 	public String registerForm() {
@@ -31,15 +32,13 @@ public class MemberController {
 	
 	@GetMapping("/login/form")
 	public String loginForm() {
-		return "pages/member/login";
+		return "pages/member/login/form";
 	}
-	
+		
 	@PostMapping("/login")
 	public String loginForm(ReqLoginDTO request,
-			                HttpSession session) {
-		
+			                HttpSession session) { 
 		ResLoginDTO response = memberService.login(request);
-		
 		if(response == null) {
 			return "redirect:/member/register/form";
 		}
@@ -47,14 +46,18 @@ public class MemberController {
 		session.setAttribute("LOGIN_USER", response);
 		return "redirect:/";
 	}
+
 	
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		
 		session.invalidate();
 		
-		return "redirect;/";
+		return "redirect:/";
 	}
-
+	
+	
+	
+	
 
 }
