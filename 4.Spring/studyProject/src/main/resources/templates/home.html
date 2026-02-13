@@ -21,13 +21,17 @@
       </button>
 
       <nav class="nav">
-        <a href="home.html" class="active">홈</a>
+        <a href="/" class="active">홈</a>
         <a href="board.html">게시판</a>
         <a href="profile.html">내 정보</a>
-        <div class="nav-auth">
-          <a href="login.html" class="btn btn-ghost btn-sm">로그인</a>
-          <a href="signup.html" class="btn btn-primary btn-sm">회원가입</a>
+        <div class="nav-auth" th:if="${session.LOGIN_USER == null}">
+          <a href="/member/login/form" class="btn btn-ghost btn-sm">로그인</a>
+          <a href="/member/register/form" class="btn btn-primary btn-sm">회원가입</a>
         </div>
+        
+          <div class="nav-right" th:if="${session.LOGIN_USER !=null}">
+                <a href="/member/logout" class="btn btn-secondary">로그아웃</a>
+            </div>
       </nav>
     </div>
   </header>

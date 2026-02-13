@@ -21,8 +21,8 @@ public class Member {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String UserName;
-	private String Nickname;
+	private String userName;
+	private String nickname;
 	private String email;
 	private String password;
 	

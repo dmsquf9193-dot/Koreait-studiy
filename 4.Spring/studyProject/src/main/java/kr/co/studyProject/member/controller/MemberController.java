@@ -32,13 +32,14 @@ public class MemberController {
 	
 	@GetMapping("/login/form")
 	public String loginForm() {
-		return "pages/member/login/form";
+		return "pages/member/login";
 	}
 		
 	@PostMapping("/login")
 	public String loginForm(ReqLoginDTO request,
 			                HttpSession session) { 
 		ResLoginDTO response = memberService.login(request);
+		
 		if(response == null) {
 			return "redirect:/member/register/form";
 		}

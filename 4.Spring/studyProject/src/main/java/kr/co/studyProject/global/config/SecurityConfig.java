@@ -8,17 +8,17 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfig {
-	
-	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.csrf(csrf -> csrf.disable()) 
         .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()); 
 		
 		return http.build();
        }
-	
-	@Bean
-	public BCryptPasswordEncoder passwordEncoder() {
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 }
