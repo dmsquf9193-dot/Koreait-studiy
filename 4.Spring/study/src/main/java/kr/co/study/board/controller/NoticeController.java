@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.servlet.http.HttpSession;
 import kr.co.study.board.dto.ReqBoardDTO;
@@ -83,7 +84,8 @@ public class NoticeController {
 	}
 	
 	@PostMapping("/create")
-	public String create(ReqBoardDTO request, HttpSession session) {
+	public String create(ReqBoardDTO request, HttpSession session,
+		                 @RequestParam(value = "files", required = false) List<MultipartFile> files) {
 		// 1. 로그인한 사용자 정보 세션에서 꺼내기
 		ResLoginDTO loginUser = (ResLoginDTO) session.getAttribute("LOGIN_USER"); // 강제 변환 시켜야함
 		
@@ -91,9 +93,8 @@ public class NoticeController {
 		if(loginUser == null) {
 			return "redirect:/member/login/form";
 		}
-		
 		// 3. 게시글 저장
-		boardService.write(request, loginUser.getId());
+		boardService.write(request, files, loginUser.getId());
 		
 		// 4. 목록으로 이동
 		return "redirect:/board/notice";
@@ -111,7 +112,8 @@ public class NoticeController {
 	}
 	
 	@PostMapping("/edit")
-	public String edit(ReqBoardDTO request, HttpSession session) {
+	public String edit(ReqBoardDTO request, HttpSession session,
+			            @RequestParam(value = "files", required = false) List<MultipartFile> files) {
 		// 1. 로그인한 사용자 조회
 		ResLoginDTO loginUser = (ResLoginDTO) session.getAttribute("LOGIN_USER");
 		
@@ -120,7 +122,7 @@ public class NoticeController {
 			return "redirect:/member/login/form";
 		}
 		// 3. 게시글 수정 진행
-		boardService.edit(request, loginUser.getId());
+		boardService.edit(request, files, loginUser.getId());
 		
 		return "redirect:/board/notice/detail?id=" + request.getId();
 	}
