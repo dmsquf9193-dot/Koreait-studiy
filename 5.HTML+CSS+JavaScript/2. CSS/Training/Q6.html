@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #4244c0, #5186db);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+
+        h1 {
+            font-size: 80px;
+            margin-bottom: 20px;
+            font-weight: 1000;
+        }
+
+        p {
+            font-size: 12px;
+            margin-bottom: 25px;
+            font-weight: 1000;
+        }
+
+        button {
+            padding: 12px 28px;
+            border-radius: 25px;
+            border: none;
+            background: white;
+            color: #1546ca;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            transform: translateY(2px);
+            box-shadow: 0 10px 15px rgba(248, 235, 56, 0.932);
+        }
+    </style>
+</head>
+<body>
+    <!--
+        렌딩 페이지
+        - 특정 목적을 위해 사용자가 들어오도록 유도하는 페이지
+
+        히어로
+        - 페이지에서 가장 강조되는 영역
+
+        히어로 구조
+        - 제목
+        - 한줄 설명
+        - CTA 버튼
+        - (선택) 이미지 등
+
+        CTA 버튼
+        - "무료로 시작하기", "지금 시작하기", "상단 신청하기" 등 특정 행동을 하라고
+        유도하는 버튼
+    -->
+    
+    <div class="hero">
+        <h1>
+            Build Your Future
+        </h1>
+        
+        
+        <p>start learning today and grow your career</p>
+
+        
+        <button>Get Stared</button>
+
+    </div>
+</body>
+</html>
