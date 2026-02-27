@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            /* 기존 컬러 */
+            background-color: burlywood;
+            /* 어떤 값을 바꿀거냐? */
+            transition-property: width, background-color;
+            /* 속도 */
+            transition-timing-function: ease;
+            /* 몇초에 걸쳐서 바뀌는지 */
+            transition-duration: 3s;
+            /* 호버상태일 때 몇초 뒤인지 */
+            transition-delay: 2s;
+        }
+
+        div:hover {
+            /* 바뀌는 컬러 */
+            width: 500px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 테두리 마우스 포인터 변경 */
+        .button {      
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: aquamarine;
+        }
+
+        /* 누르면 움직임 */
+        .button:active {
+            transform: translateY(50px);
+        }
+        /* 링크 클릭 전 색깔 */
+        a:link {
+            color: red;
+        }
+
+        /* 링크 클릭 후 색깔 */
+        a:visited {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="button">클릭</button>
+
+    <a href="https://www.google.com">이동</a>
+</body>
+</html>

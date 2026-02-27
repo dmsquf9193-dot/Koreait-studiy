@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .blue-box {
+        height: 100vh;
+        background: #007bff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+}
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 50%;
+         animation: grow 1.5s ease-in-out infinite alternate;
+}
+        
+
+
+@keyframes grow {
+    0% { 
+        transform: translateY(0); 
+    }
+    100% { 
+        transform: translateY(400px);
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="blue-box">
+    <div class="circle"></div>
+</div>
+</body>
+</html>
