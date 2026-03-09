@@ -9,8 +9,27 @@ import Path from './pages/04_Path.jsx'
 import Extension from './pages/05_Extension.jsx'
 import Props from './pages/06_Props.jsx'
 import Rendering from './pages/07_Rendering.jsx'
+import ListRendering from './pages/08_ListRendering.jsx'
+import EventHandler from './pages/09_EventHandler.jsx'
+import ProfilePage from './pages/training/Q1_ProfilePage.jsx'
+import ButtonPage from './pages/training/Q2_ButtonPage.jsx'
+import LoginPage from './pages/training/Q3_LoginPage.jsx'
+import FruitPage from './pages/training/Q4_FruitPage.jsx'
+import EventPage from './pages/training/Q5_EventPage.jsx'
+import MenuPage from './pages/training/Q6_MenuPage.jsx'
+import MessagePage from './pages/training/Q7_MessagePage.jsx'
+import StudentPage from './pages/training/Q8_StudentPage.jsx'
+import ResultPage from './pages/training/Q9_ResultPage.jsx'
+import State from './pages/10_State.jsx'
+import UseState from './pages/11_UseState.jsx'
+import FormHandling from './pages/12_FormHandling.jsx'
+import Lifting from './pages/13_Lifting.jsx'
 
 import {createBrowserRouter,RouterProvider} from "react-router-dom"
+
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -40,6 +59,66 @@ const router = createBrowserRouter([
   {
     path: "/07",
     element: <Rendering/>
+  },
+  {
+    path: "/08",
+    element: <ListRendering/>
+  },
+  {
+    path: "/09",
+    element: <EventHandler/>
+  },
+  {
+    path: "/Q1",
+    element: <ProfilePage/>
+  },
+  {
+    path: "/Q2",
+    element: <ButtonPage/>
+  },
+  {
+    path: "/Q3",
+    element: <LoginPage/>
+  },
+  {
+    path: "/Q4",
+    element: <FruitPage/>
+  },
+  {
+    path: "/Q5",
+    element: <EventPage/>
+  },
+  {
+    path: "/Q6",
+    element: <MenuPage/>
+  },
+  {
+    path: "/Q7",
+    element: <MessagePage/>
+  },
+  {
+    path: "/Q8",
+    element: <StudentPage/>
+  },
+  {
+    path: "/Q9",
+    element: <ResultPage/>
+  },
+  {
+    path: "/10",
+    element: <State/>
+  },
+  {
+    path: "/11",
+    element: <UseState/>
+  },
+  {
+    path: "/12",
+    element: <FormHandling/>
+  },
+  {
+    path: "/13",
+    element: <Lifting/>
   }
 ])
 createRoot(document.getElementById('root')).render(
