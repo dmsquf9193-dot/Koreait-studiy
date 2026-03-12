@@ -2,17 +2,30 @@ import { Link, useLocation } from "react-router-dom";
 import { useCheckMemberQuery } from "../query/checkMemberQuery";
 import useUserStore from "../store/userStore";
 import { useEffect } from "react";
+import { useLogoutMemberMutation } from "../query/logoutMemberMutation";
+import { useQueryClient } from "@tanstack/react-query";
 
 function Header() {
     const location = useLocation();
     const {data, isLoading, error} = useCheckMemberQuery();
+    const logoutMemberMutation = useLogoutMemberMutation();
     const {currentUser, setCurrentUser} = useUserStore();
+    const QueryClient = useQueryClient();
+
     useEffect(() => {
         setCurrentUser(data);
-    }, [])
+    }, [data])
 
     const isActive = (path) => {
         return location.pathname === path ? 'nav-link active' : 'nav-link';
+    }
+
+    const handleLogout = () => {
+        logoutMemberMutation.mutate();
+
+        QueryClient.removeQueries({
+            queryKey: ['checkMember']
+        })
     }
 
     return(
@@ -21,7 +34,7 @@ function Header() {
                 <div className="logo">Spring Hub</div>
                 <ul className="nav-center">
                     <li><Link to="/" className={isActive('/')}>홈</Link></li>
-                    <li><Link to="/notice" className={isActive('/notice')}>공지사항</Link></li>
+                    <li><Link to="/notice/list" className={isActive('/notice/list')}>공지사항</Link></li>
                     <li><Link to="/free" className={isActive('/free')}>자유게시판</Link></li>
                     <li><Link to="/profile" className={isActive('/profile')}>회원정보</Link></li>
                 </ul>
@@ -34,7 +47,9 @@ function Header() {
                     }
                     {currentUser && 
                         <>
-                            <Link to="/logout" className="btn btn-secondary">로그아웃</Link>
+                            <button className="btn btn-primary"
+                            style={{textDecoration: 'none', display: 'inline-block', cursor: 'pointer'}}
+                            onClick={handleLogout}>로그아웃</button>
                         </>
                     }
                 

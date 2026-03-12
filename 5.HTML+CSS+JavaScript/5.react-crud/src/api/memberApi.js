@@ -24,10 +24,16 @@ export const loginMemberApi = async (loginData) => {
 
     return response.data;
 }
+//로그아웃
+export const logoutMemberApi = async() => {
+    const response = await axiosInstance.get('/api/member/logout', {
+    withCredentials: true
+    })
+    return response.data
+}
 
 // 현재 로그인 상태 확인
 export const checkMemberApi = async() => {
-    
     const response = await axiosInstance.get('/api/member/check', {
         withCredentials: true
     })
