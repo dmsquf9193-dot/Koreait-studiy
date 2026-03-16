@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로그인</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+<div class="login-card">
+<h1>로그인</h1>
+
+<div class="form-group">
+<label for="email">이메일</label>
+<input type="email" id="email" placeholder="이메일을 입력하세요">
+</div>
+
+<div class="form-group">
+<label for="password">비밀번호</label>
+<input type="password" id="password" placeholder="비밀번호를 입력하세요">
+</div>
+
+<button class="login-btn" onclick="login()">로그인</button>
+
+<div class="message" id="message"></div>
+
+</div>
+
+<script>
+
+function login(){
+
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+const message = document.getElementById("message");
+
+if(email === "hong@example.com" && password === "qwer1234"){
+
+location.href = "user-list.html";
+
+}else{
+
+message.textContent = "이메일 또는 비밀번호가 올바르지 않습니다.";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 상세</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        회원 관리 시스템
+    </header>
+
+    <nav class="nav">
+        <a href="#">홈</a>
+        <a href="#">회원목록</a>
+        <a href="#">설정</a>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>사이드 메뉴</h3>
+            <ul>
+                <li>대시보드</li>
+                <li>회원 목록</li>
+                <li>공지사항</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h2>회원 상세 페이지</h2>
+
+            <div class="detail-card">
+                <p><strong>이름 :</strong> 홍길동</p>
+                <p><strong>이메일 :</strong> hong@example.com</p>
+                <p><strong>전화번호 :</strong> 010-1234-5678</p>
+                <p><strong>주소 :</strong> 서울특별시 강남구</p>
+
+                <button class="detail-btn" onclick="goList()">목록</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function goList() {
+            location.href = "user-list.html";
+        }
+    </script>
+
+</body>
+
+</html>

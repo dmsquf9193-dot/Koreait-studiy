@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원목록</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        회원 관리 시스템
+    </header>
+
+    <nav class="nav">
+        <a href="#">홈</a>
+        <a href="#">회원목록</a>
+        <a href="#">설정</a>
+    </nav>
+
+    <div class="container">
+    <aside class="sidebar">
+    <h3>사이드 메뉴</h3>
+    <ul>
+        <li>대시보드</li>
+        <li>회원 목록</li>
+        <li>공지사항</li>
+    </ul>
+    </aside>
+
+    <main class="content">
+        <h2>회원 목록</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>이메일</th>
+                    <th>보기</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>홍길동</td>
+                    <td>hong@examlpe.com</td>
+                    <td>
+                        <button class="detail-btn" onclick="goDetail()">보기</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>김철수</td>
+                    <td>kim@examlpe.com</td>
+                    <td>
+                        <button class="detail-btn" onclick="goDetail()">보기</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>이영희</td>
+                    <td>lee@examlpe.com</td>
+                    <td>
+                        <button class="detail-btn" onclick="goDetail()">보기</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    </div>
+
+    <script>
+        function goDetail() {
+            location.href = "user-detail.html";
+        }
+    </script>
+</body>
+</html>
