@@ -1,0 +1,29 @@
+package kr.co.restStudy.board.dto;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.web.multipart.MultipartFile;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder //setter 대신 사용(setter 하나가 필요하면 따로 하나 사용하면 됨)
+public class ResBoardDTO {
+	private Long id;
+	private String category;
+	private String title;
+	private String content;
+	private String writerName;
+	private LocalDateTime createdAt;
+	private int viewCount;
+	private List<ResBoardFileDTO> files;
+	
+	
+}
