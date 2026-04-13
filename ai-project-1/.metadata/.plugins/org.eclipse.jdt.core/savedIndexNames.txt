@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+C:\study(절대 건들지마세요)\Koreait-studiy\ai-project-1\.metadata\.plugins\org.eclipse.jdt.core
