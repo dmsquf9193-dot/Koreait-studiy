@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-mysql-deployment
+  labels:
+    app: test-mysql-deployment
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: test-mysql-container
+  template:
+    metadata:
+      labels:
+        app: test-mysql-container
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:8.0
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: test-configmap
+                  key: MYSQL_ROOT_PASSWORD
+            - name: MYSQL_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: test-configmap
+                  key: MYSQL_DATABASE
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: test-configmap
+                  key: DB_HOST

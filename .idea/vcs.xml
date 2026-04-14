@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/6.CICD/cicd-react" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/8.GitOps (ArgoCD)" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/GitOps" vcs="Git" />
+  </component>
+</project>
